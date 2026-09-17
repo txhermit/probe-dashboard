@@ -1,0 +1,72 @@
+.probe-dash {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 0;
+    font-size: 12px;
+}
+
+.probe-dash-status {
+    flex: 0 0 auto;
+    padding: 4px 8px;
+    opacity: 0.8;
+    border-bottom: 1px solid rgba(127, 127, 127, 0.35);
+}
+
+.probe-dash-scroll {
+    flex: 1 1 auto;
+    overflow: auto;
+    min-height: 0;
+}
+
+.probe-dash-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+    border: 0;
+}
+
+.probe-dash-table thead th {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    text-align: left;
+    padding: 4px 8px;
+    font-weight: 600;
+    background: var(--layout-offset-background-color, #444);
+    border-bottom: 1px solid rgba(127, 127, 127, 0.5);
+}
+
+.probe-dash-table tbody td {
+    padding: 3px 8px;
+    border-top: 1px solid rgba(127, 127, 127, 0.25);
+    background: transparent;
+    vertical-align: top;
+    white-space: nowrap;
+}
+
+.probe-dash-table tbody tr:nth-child(odd) td {
+    background: rgba(127, 127, 127, 0.08);
+}
+
+.probe-dash-mac,
+.probe-dash-ssid {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+.probe-dash-ssid.wildcard {
+    font-style: italic;
+    opacity: 0.7;
+}
+
+.probe-dash-rssi.hot {
+    color: #3c3;
+}
+
+.probe-dash-rssi.warm {
+    color: #cc3;
+}
+
+.probe-dash-rssi.cold {
+    color: #c66;
+}
